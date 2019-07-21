@@ -2,3 +2,6 @@
 
 ### /terraform
 - terraform directory with infrastructure configuration
+
+### /website
+- demo react app
