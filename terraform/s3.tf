@@ -24,6 +24,7 @@ resource "aws_s3_bucket" "redirect" {
   acl = "public-read"
 
   website {
+    # redirect_all_requests_to = "${aws_s3_bucket.site.website_endpoint}" use if there is no custom domain
     redirect_all_requests_to = "${var.domain}"
   }
 }
