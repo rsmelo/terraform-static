@@ -15,7 +15,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   logging_config {
     include_cookies = true
-    bucket = "${aws_s3_bucket.log.bucket_regional_domain_name}"
+    bucket = "${aws_s3_bucket.log.bucket_domain_name}"
     prefix = "cdn"
   }
 
@@ -40,7 +40,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     max_ttl = 86400
   }
 
-  price_class = "PriceClass_All"
+  price_class = "PriceClass_200"
 
   restrictions {
     geo_restriction {
